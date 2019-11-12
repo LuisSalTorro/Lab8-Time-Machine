@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2019.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Torre\CLionProjects\Lab08
+C:\Users\evan4\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.7142.39\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\evan4\CLionProjects\Lab8-Time-Machine
 -- The C compiler identification is GNU 8.2.0
 -- The CXX compiler identification is GNU 8.2.0
 -- Check for working C compiler: C:/MinGW/bin/gcc.exe
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Torre/CLionProjects/Lab08/cmake-build-debug
+-- Build files have been written to: C:/Users/evan4/CLionProjects/Lab8-Time-Machine/cmake-build-debug

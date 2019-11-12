@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Torre/CLionProjects/Lab08
+# Install script for directory: C:/Users/evan4/CLionProjects/Lab8-Time-Machine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Torre/CLionProjects/Lab08/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/evan4/CLionProjects/Lab8-Time-Machine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

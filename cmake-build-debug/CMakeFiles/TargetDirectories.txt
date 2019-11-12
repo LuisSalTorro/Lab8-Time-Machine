@@ -1,3 +1,3 @@
-C:/Users/Torre/CLionProjects/Lab08/cmake-build-debug/CMakeFiles/Lab08.dir
-C:/Users/Torre/CLionProjects/Lab08/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Torre/CLionProjects/Lab08/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/evan4/CLionProjects/Lab8-Time-Machine/cmake-build-debug/CMakeFiles/Lab08.dir
+C:/Users/evan4/CLionProjects/Lab8-Time-Machine/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/evan4/CLionProjects/Lab8-Time-Machine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
