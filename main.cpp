@@ -64,11 +64,12 @@ void CPresent::biologicalClock(vector<CFuture::fifth_dimension> *dimension)
 {
     while (dimension->size() > 0)
     {
+        cout << currentYear << endl;
         for (int i = 0; i < dimension->size(); i++)
         {
             if ((dimension->at(i).year_in_future == currentYear) && dimension->at(i).alive == 0)
             {
-                cout << "darth vader decided to kill " << dimension->at(i).name << " with "
+                cout << "Darth Vader decided to kill " << dimension->at(i).name << " with "
                      << dimension->at(i).remaining_life_span << " years left" << endl;
                 dimension->erase(dimension->begin()+i);
             }
@@ -79,12 +80,13 @@ void CPresent::biologicalClock(vector<CFuture::fifth_dimension> *dimension)
             }
             else
             {
-                cout << "alive: " << dimension->at(i).name << " has "
+                cout << "Alive: " << dimension->at(i).name << " has "
                      << dimension->at(i).remaining_life_span << " years left" << endl;
                 dimension->at(i).remaining_life_span -= 1;
             }
         }
         currentYear += 1;
+        cout << endl;
     }
 }
 

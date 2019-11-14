@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cec82067-8625-4dd0-81cb-a37e1ba4a0ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab08.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab08.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab08.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab08.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Lab08.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Lab08.exe" afterDir="false" />
@@ -75,6 +74,7 @@
       <workItem from="1573700361687" duration="995000" />
       <workItem from="1573754854494" duration="2618000" />
       <workItem from="1573761491068" duration="2080000" />
+      <workItem from="1573772285348" duration="275000" />
     </task>
     <servers />
   </component>
