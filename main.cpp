@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class CFuture{
@@ -9,12 +10,14 @@ public:
         int alive;
         int year_in_future;
     };
-    void decide_the_future();
+    void decide_the_future(vector<fifth_dimension> *dimension);
 };
 
 class CPresent{
+private:
+    int currentYear = 2019;
 public:
-    void biologicalClock(CFuture::fifth_dimension dimension);
+    void biologicalClock(vector<CFuture::fifth_dimension> *dimension);
 };
 
 class CTimeMachine{
@@ -22,50 +25,66 @@ public:
     void API();
 };
 
-void CTimeMachine::API() {
-    CPresent present, *presentPointer;
-    CFuture future, *futurePointer; //the number of future objects depends on how many are alive
-    presentPointer = &present;
-    futurePointer = &future;
-    futurePointer->decide_the_future();
-    //pass the *present into future
-
-}
-
-void CFuture::decide_the_future()
+void CTimeMachine::API()
 {
-    fifth_dimension dimension, *dimensionPointer;
-    dimensionPointer = &dimension;
+    CPresent present;
+    CFuture future;
 
     int input;
-    cout << "how many people are there" << endl;
+    cout << "how many time travelers are there" << endl;
     cin >> input;
-    dimensionPointer = new fifth_dimension[input];
 
-    for (int i = 0; i < input; i++)
+    vector<CFuture::fifth_dimension> dimension, *dimensionPointer;
+    dimensionPointer = &dimension;
+
+    dimensionPointer->reserve(input);
+
+    future.decide_the_future(dimensionPointer);
+    present.biologicalClock(dimensionPointer);
+}
+
+void CFuture::decide_the_future(vector<fifth_dimension> *dimension)
+{
+    for (int i = 0; i < dimension->capacity(); i++)
     {
-        cout << "What is Luke's lifespan" << endl;
-        cin >> dimensionPointer[i].remaining_life_span;
+        dimension->push_back(fifth_dimension());
+
+        cout << "What is the time travellers name" << endl;
+        cin >> dimension->at(i).name;
+        cout << "What is " << dimension->at(i).name << "'s lifespan" << endl;
+        cin >> dimension->at(i).remaining_life_span;
         cout << "what is the future year" << endl;
-        cin >> dimensionPointer[i].year_in_future;
-        cout << "Does Darth Vader kill or spare Luke (0/1)" << endl;
-        cin >> dimensionPointer[i].alive;
+        cin >> dimension->at(i).year_in_future;
+        cout << "Does Darth Vader kill or spare " << dimension->at(i).name << " (0/1)" << endl;
+        cin >> dimension->at(i).alive;
     }
 }
 
-void CPresent::biologicalClock(CFuture::fifth_dimension dimension)
+void CPresent::biologicalClock(vector<CFuture::fifth_dimension> *dimension)
 {
-    for (int i = 0; i < dimension.remaining_life_span; i++)
+    while (dimension->size() > 0)
     {
-        if(dimension.remaining_life_span > 0)
+        for (int i = 0; i < dimension->size(); i++)
         {
-            cout << "alive: " << dimension.name << "has "
-            << dimension.remaining_life_span << " years left" << endl;
+            if ((dimension->at(i).year_in_future == currentYear) && dimension->at(i).alive == 0)
+            {
+                cout << "darth vader decided to kill " << dimension->at(i).name << " with "
+                     << dimension->at(i).remaining_life_span << " years left" << endl;
+                dimension->erase(dimension->begin()+i);
+            }
+            else if(dimension->at(i).remaining_life_span == 0)
+            {
+                cout << dimension->at(i).name << " has died peacefully in " << currentYear << endl;
+                dimension->erase(dimension->begin()+i);
+            }
+            else
+            {
+                cout << "alive: " << dimension->at(i).name << " has "
+                     << dimension->at(i).remaining_life_span << " years left" << endl;
+                dimension->at(i).remaining_life_span -= 1;
+            }
         }
-        else
-        {
-            cout << "darth vader decided to kill" << dimension.name << endl;
-        }
+        currentYear += 1;
     }
 }
 
